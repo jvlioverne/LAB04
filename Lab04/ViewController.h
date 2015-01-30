@@ -10,6 +10,11 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UIButton *btnShoot;
+@property (strong, nonatomic) IBOutlet UILabel *lblTime;
+- (IBAction)btnStartPressed:(id)sender;
+- (IBAction)btnShootPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UILabel *lblInfo;
 
 @end
 

@@ -7,10 +7,15 @@
 //
 
 #import "ViewController.h"
+int shoot = 0;
 
 @interface ViewController ()
 
+@property (strong, nonatomic) NSTimer *stopWatchTimer;
+@property (strong, nonatomic) NSTimer *startDate;
+
 @end
+
 
 @implementation ViewController
 
@@ -23,5 +28,37 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)updateTimer
+{
+    static NSInteger counter = 0;
+    self.lblTime.text = [NSString stringWithFormat:@"%i",counter ++];
+    
+    if (counter >10 ) {
+        [self.stopWatchTimer invalidate];
+        self.stopWatchTimer = nil;
+        
+        self.btnShoot.enabled = false;
+    
+    }
+    
+    
+}
+
+- (IBAction)btnStartPressed:(id)sender {
+    self.btnShoot.enabled = true;
+    self.startDate = [NSDate date];
+    
+    self.stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    
+}
+
+- (IBAction)btnShootPressed:(id)sender {
+    
+    shoot ++;
+    self.lblInfo.text = [NSString stringWithFormat:@"%i",shoot];
+    
+}
+
 
 @end
