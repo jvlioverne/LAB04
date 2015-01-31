@@ -11,5 +11,10 @@
 @interface TableScore : UIViewController <UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tblScore;
+@property (strong, nonatomic) NSString *puntaje;
+@property (strong, nonatomic) NSString *fechaHora;
+
+
+
 
 @end

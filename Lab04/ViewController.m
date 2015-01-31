@@ -7,7 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "TableScore.h"
 int shoot = 0;
+
 
 @interface ViewController ()
 
@@ -57,6 +59,32 @@ int shoot = 0;
     
     shoot ++;
     self.lblInfo.text = [NSString stringWithFormat:@"%i",shoot];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    
+    NSString *currentTime = [dateFormatter stringFromDate:[NSDate date]];
+    //[dateFormatter release]; dateFormatter = nil;
+    self.tiempo =currentTime;
+    
+}
+
+
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"segueLista"])
+    {
+        
+        //
+        
+        TableScore *scoreList = [segue destinationViewController];
+        scoreList.puntaje = self.lblInfo.text;
+        soreList.fechaHora =
+        
+    }
     
 }
 

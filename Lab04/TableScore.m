@@ -7,6 +7,9 @@
 //
 
 #import "TableScore.h"
+NSMutableArray *scoreArray;
+NSMutableArray *fechaHoraArray;
+
 
 @interface TableScore ()
 
@@ -17,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [scoreArray addObject:@"puntaje"];
+    [scoreArray addObject:@"fechaHora"];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,7 @@
 - (IBAction)btnStartPressed:(id)sender;
 - (IBAction)btnShootPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UILabel *lblInfo;
+@property (strong, nonatomic) NSString *tiempo;
 
 @end
 
