@@ -14,6 +14,7 @@
 		8B00275B1A76FC79006D65EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B00275A1A76FC79006D65EA /* Images.xcassets */; };
 		8B00275E1A76FC79006D65EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B00275C1A76FC79006D65EA /* LaunchScreen.xib */; };
 		8B00276A1A76FC79006D65EA /* Lab04Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0027691A76FC79006D65EA /* Lab04Tests.m */; };
+		8B1496821A7B2825005DF4A7 /* TableScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1496811A7B2825005DF4A7 /* TableScore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8B0027631A76FC79006D65EA /* Lab04Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Lab04Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0027681A76FC79006D65EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B0027691A76FC79006D65EA /* Lab04Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab04Tests.m; sourceTree = "<group>"; };
+		8B1496801A7B2825005DF4A7 /* TableScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableScore.h; sourceTree = "<group>"; };
+		8B1496811A7B2825005DF4A7 /* TableScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableScore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				8B0027521A76FC78006D65EA /* AppDelegate.m */,
 				8B0027541A76FC78006D65EA /* ViewController.h */,
 				8B0027551A76FC78006D65EA /* ViewController.m */,
+				8B1496801A7B2825005DF4A7 /* TableScore.h */,
+				8B1496811A7B2825005DF4A7 /* TableScore.m */,
 				8B0027571A76FC79006D65EA /* Main.storyboard */,
 				8B00275A1A76FC79006D65EA /* Images.xcassets */,
 				8B00275C1A76FC79006D65EA /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				8B0027561A76FC78006D65EA /* ViewController.m in Sources */,
 				8B0027531A76FC78006D65EA /* AppDelegate.m in Sources */,
 				8B0027501A76FC78006D65EA /* main.m in Sources */,
+				8B1496821A7B2825005DF4A7 /* TableScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +420,7 @@
 				8B00276F1A76FC79006D65EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B0027701A76FC79006D65EA /* Build configuration list for PBXNativeTarget "Lab04Tests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +429,7 @@
 				8B0027721A76FC79006D65EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
