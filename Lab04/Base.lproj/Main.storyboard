@@ -37,6 +37,18 @@
                                     <segue destination="D9G-wM-uzv" kind="modal" identifier="segueLista" id="yvf-ED-0nB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="XAr-4Z-xVN" userLabel="btnShoot">
+                                <rect key="frame" x="103" y="243" width="115" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Disparar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShootPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItJ-Xj-PaG"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ujl-pm-ihc" userLabel="lblTime">
                                 <rect key="frame" x="67" y="62" width="186" height="107"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -52,24 +64,20 @@
                                 <color key="textColor" red="0.31969061989999997" green="0.5349047536" blue="0.53991082700000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="XAr-4Z-xVN" userLabel="btnShoot">
-                                <rect key="frame" x="103" y="243" width="115" height="49"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fecha/hora" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G1v-RC-hPF" userLabel="lblDate">
+                                <rect key="frame" x="26" y="479" width="271" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Disparar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btnShootPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ItJ-Xj-PaG"/>
-                                </connections>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.52941176469999995" green="0.80784313730000001" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="btnShoot" destination="XAr-4Z-xVN" id="ubQ-SH-TDy"/>
+                        <outlet property="lblDate" destination="G1v-RC-hPF" id="wc4-QP-FpU"/>
                         <outlet property="lblInfo" destination="LDY-2u-rmY" id="lqP-AY-T3T"/>
                         <outlet property="lblTime" destination="ujl-pm-ihc" id="BYB-67-ffc"/>
                     </connections>
@@ -91,7 +99,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellScores" editingAccessoryType="checkmark" id="f06-kc-JjE" userLabel="cellScore">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" editingAccessoryType="checkmark" id="f06-kc-JjE" userLabel="cellScore" customClass="myCell">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="f06-kc-JjE" id="wS5-5U-AZ8">
@@ -113,6 +121,10 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblFechaHora" destination="cha-H6-oQH" id="V4s-50-2CV"/>
+                                            <outlet property="lblScore" destination="uLU-2L-LYK" id="Ja3-0s-s8n"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

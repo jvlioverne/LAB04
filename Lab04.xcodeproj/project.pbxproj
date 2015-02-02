@@ -15,6 +15,7 @@
 		8B00275E1A76FC79006D65EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B00275C1A76FC79006D65EA /* LaunchScreen.xib */; };
 		8B00276A1A76FC79006D65EA /* Lab04Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B0027691A76FC79006D65EA /* Lab04Tests.m */; };
 		8B1496821A7B2825005DF4A7 /* TableScore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1496811A7B2825005DF4A7 /* TableScore.m */; };
+		8B1496851A7FEF04005DF4A7 /* myCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B1496841A7FEF04005DF4A7 /* myCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		8B0027691A76FC79006D65EA /* Lab04Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lab04Tests.m; sourceTree = "<group>"; };
 		8B1496801A7B2825005DF4A7 /* TableScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableScore.h; sourceTree = "<group>"; };
 		8B1496811A7B2825005DF4A7 /* TableScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableScore.m; sourceTree = "<group>"; };
+		8B1496831A7FEF03005DF4A7 /* myCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myCell.h; sourceTree = "<group>"; };
+		8B1496841A7FEF04005DF4A7 /* myCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 				8B0027521A76FC78006D65EA /* AppDelegate.m */,
 				8B0027541A76FC78006D65EA /* ViewController.h */,
 				8B0027551A76FC78006D65EA /* ViewController.m */,
+				8B1496831A7FEF03005DF4A7 /* myCell.h */,
+				8B1496841A7FEF04005DF4A7 /* myCell.m */,
 				8B1496801A7B2825005DF4A7 /* TableScore.h */,
 				8B1496811A7B2825005DF4A7 /* TableScore.m */,
 				8B0027571A76FC79006D65EA /* Main.storyboard */,
@@ -226,6 +231,7 @@
 			files = (
 				8B0027561A76FC78006D65EA /* ViewController.m in Sources */,
 				8B0027531A76FC78006D65EA /* AppDelegate.m in Sources */,
+				8B1496851A7FEF04005DF4A7 /* myCell.m in Sources */,
 				8B0027501A76FC78006D65EA /* main.m in Sources */,
 				8B1496821A7B2825005DF4A7 /* TableScore.m in Sources */,
 			);

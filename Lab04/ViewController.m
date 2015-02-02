@@ -44,6 +44,15 @@ int shoot = 0;
     
     }
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
+    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
+    
+    NSString *currentTime = [dateFormatter stringFromDate:[NSDate date]];
+    //[dateFormatter release]; dateFormatter = nil;
+    self.tiempo =currentTime;
+    self.lblDate.text = currentTime;
     
 }
 
@@ -60,14 +69,6 @@ int shoot = 0;
     shoot ++;
     self.lblInfo.text = [NSString stringWithFormat:@"%i",shoot];
     
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
-    [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];
-    
-    NSString *currentTime = [dateFormatter stringFromDate:[NSDate date]];
-    //[dateFormatter release]; dateFormatter = nil;
-    self.tiempo =currentTime;
     
 }
 
@@ -82,7 +83,7 @@ int shoot = 0;
         
         TableScore *scoreList = [segue destinationViewController];
         scoreList.puntaje = self.lblInfo.text;
-        soreList.fechaHora =
+        scoreList.fechaHora = self.lblDate.text;
         
     }
     
