@@ -58,7 +58,7 @@ int shoot = 0;
 
 - (IBAction)btnStartPressed:(id)sender {
     self.btnShoot.enabled = true;
-    self.startDate = [NSDate date];
+    //self.startDate = [NSDate date];
     
     self.stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
     

@@ -47,31 +47,11 @@ NSMutableArray *fechaHoraArray;
 - (void)initController
 {
 
-    // Convert string to date object
-    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"yyyyMMdd"];
-    NSDate *date = [dateFormat dateFromString:fechaHora];
-    
-    [dateFormat setDateFormat:@"EEEE MMMM d, YYYY"];
-    fechaHora = [dateFormat stringFromDate:date];
-    //[dateFormat release];
-    
-    
    scoreArray = [[NSMutableArray alloc] init];
     [scoreArray addObject:puntaje];
-    //[scoreArray release];
     
     fechaHoraArray = [[NSMutableArray alloc] init];
-    [scoreArray addObject:[NSString stringWithFormat:fechaHora]];
-
-    
-    
-    
-    
-    //scoreArray         =  [NSMutableArray arrayWithObjects:@"Walter González", @"Alejandra Bautista", @"Augusto Bustamante", @"José Chávez", @"Alberto Cordero", nil];
-    
-    //fechaHoraArray           =  [NSMutableArray arrayWithObjects: @"35", @"25", @"42", @"36", @"24", nil];
-
+    [fechaHoraArray addObject:fechaHora];
 
 }
 
