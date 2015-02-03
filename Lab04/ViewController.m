@@ -21,6 +21,8 @@ int shoot = 0;
 
 @implementation ViewController
 
+int counter= 0;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -31,16 +33,22 @@ int shoot = 0;
     // Dispose of any resources that can be recreated.
 }
 
+
+
 - (void)updateTimer
 {
-    static NSInteger counter = 0;
-    self.lblTime.text = [NSString stringWithFormat:@"%i",counter ++];
+    //static NSInteger counter = 0;
+    
+    NSString *timeString = [[NSString alloc] initWithFormat:@"%i", counter ++];
+    self.lblTime.text = timeString;
     
     if (counter >10 ) {
-        [self.stopWatchTimer invalidate];
-        self.stopWatchTimer = nil;
-        
+        [_stopWatchTimer invalidate];
+        _stopWatchTimer = nil;
+        counter = 0;
         self.btnShoot.enabled = false;
+        self.btnScores.enabled = true;
+    
     
     }
     
@@ -58,9 +66,13 @@ int shoot = 0;
 
 - (IBAction)btnStartPressed:(id)sender {
     self.btnShoot.enabled = true;
-    //self.startDate = [NSDate date];
+    self.btnScores.enabled = false;
     
-    self.stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateTimer) userInfo:nil repeats:YES];
+    
+    self.stopWatchTimer = [NSTimer scheduledTimerWithTimeInterval:1.0
+                                                        target:self
+                                                        selector:@selector(updateTimer)
+                                                         userInfo:nil repeats:YES];
     
 }
 
@@ -68,7 +80,6 @@ int shoot = 0;
     
     shoot ++;
     self.lblInfo.text = [NSString stringWithFormat:@"%i",shoot];
-    
     
 }
 
@@ -78,8 +89,6 @@ int shoot = 0;
 {
     if ([[segue identifier] isEqualToString:@"segueLista"])
     {
-        
-        //
         
         TableScore *scoreList = [segue destinationViewController];
         scoreList.puntaje = self.lblInfo.text;

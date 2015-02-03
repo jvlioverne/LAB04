@@ -89,30 +89,11 @@ NSMutableArray *fechaHoraArray;
     cell.lblScore.text       = scoreArray[indexPath.row];
     cell.lblFechaHora.text   = fechaHoraArray[indexPath.row];
     
-    //cell.lblAge.text        = maAge[indexPath.row];
-    //cell.imgUser.image      = [UIImage imageNamed:maImgs[indexPath.row]];
     
     return cell;
 }
 
-//-------------------------------------------------------------------------------
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
- //   self.lblSelectedName.text = maNames[indexPath.row];
-  //  NSString *strTemp;
-    
-  //  strTemp = [self.lblSelectedName.text stringByAppendingString: @" fué seleccionado"];
-    
-  //  if (indexPath.row == 2)
-  //  {
-  //      alert = [[UIAlertView alloc] initWithTitle:@"Alerta Oaxaca"
-   //                                        message:strTemp
-   //                                       delegate:self
-   //                              cancelButtonTitle:@"Cancelar"
-   //                              otherButtonTitles:@"Guardar", @"Publicar", nil];
-    //    [alert show];
-   // }
-//}
+
 
 
 @end

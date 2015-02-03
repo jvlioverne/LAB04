@@ -24,7 +24,7 @@
                                     <action selector="btnStartPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3vs-KG-xFA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VBf-F6-AQm" userLabel="btnStart">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="VBf-F6-AQm" userLabel="btnScores">
                                 <rect key="frame" x="103" y="362" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48219349610000001" green="0.80680375709999996" blue="0.81435448229999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -76,6 +76,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="btnScores" destination="VBf-F6-AQm" id="HTw-zv-Tcv"/>
                         <outlet property="btnShoot" destination="XAr-4Z-xVN" id="ubQ-SH-TDy"/>
                         <outlet property="lblDate" destination="G1v-RC-hPF" id="wc4-QP-FpU"/>
                         <outlet property="lblInfo" destination="LDY-2u-rmY" id="lqP-AY-T3T"/>
@@ -132,6 +133,16 @@
                                     <outlet property="delegate" destination="D9G-wM-uzv" id="Esr-MB-xbm"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9yZ-NU-amo" userLabel="btnRegresar">
+                                <rect key="frame" x="3" y="14" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Regresar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="PjK-29-NZS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -141,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2S-rJ-a7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="527" y="337"/>
+            <point key="canvasLocation" x="489" y="321"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
