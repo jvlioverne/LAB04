@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+NSMutableArray *scoreArray;
+NSMutableArray *fechaHoraArray;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+
 
 @property (strong, nonatomic) UIWindow *window;
 

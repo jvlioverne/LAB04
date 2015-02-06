@@ -8,9 +8,9 @@
 
 #import "TableScore.h"
 #import "myCell.h"
+#import "AppDelegate.h"
 
-NSMutableArray *scoreArray;
-NSMutableArray *fechaHoraArray;
+
 
 
 @interface TableScore ()
@@ -47,10 +47,10 @@ NSMutableArray *fechaHoraArray;
 - (void)initController
 {
 
-   scoreArray = [[NSMutableArray alloc] init];
+
     [scoreArray addObject:puntaje];
     
-    fechaHoraArray = [[NSMutableArray alloc] init];
+
     [fechaHoraArray addObject:fechaHora];
 
 }
